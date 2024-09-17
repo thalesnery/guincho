@@ -1,24 +1,60 @@
-body, html {
+/* Reset básico para garantir consistência em todos os navegadores */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do corpo e da página */
+body, html {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #f06, #4a90e2);
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    transition: all 0.3s ease;
 }
 
+/* Adicionando um efeito de animação ao carregar a página */
+body {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Container centralizado com um design moderno */
 .container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efeito hover para tornar a interação mais interessante */
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do título */
 h1 {
-    font-size: 2.5em;
-    color: #333;
-    margin: 0;
+    font-size: 3em;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease;
+}
+
+/* Efeito hover no título para um toque interativo */
+.container:hover h1 {
+    color: #f7f7f7;
 }
